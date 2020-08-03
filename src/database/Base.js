@@ -2,7 +2,7 @@ const EventEmitter = require('events');
 const fs = require('fs');
 
 class table extends EventEmitter {
-  constructor() {
+  constructor(name) {
     super();
     this.tableName = name;
     this.events = new EventEmitter();
