@@ -1,5 +1,5 @@
 {
-  "name": "mock.db-master",
+  "name": "mock.db",
   "version": "1.0.0",
   "description": "Lemme drive the boat. This 👏 is 👏 the 👏 most 👏 efficient 👏 database 👏 to 👏 date.",
   "main": "src/index.js",
