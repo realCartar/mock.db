@@ -1,17 +1,12 @@
-const EventEmitter = require('events');
 const fs = require('fs');
 
-class table extends EventEmitter {
+class table {
   constructor(name) {
-    super();
+    if(!name) return console.error(new TypeError('no table name provided'));
     this.tableName = name;
-    this.events = new EventEmitter();
     this.separator = '/'; if(process.platform === 'win32') this.separator = '\\';
-    if(!fs.existsSync(process.cwd() + `${this.separator}database`)) fs.mkdir(process.cwd() + `${this.separator}database${this.separator}`);
-    if(!fs.existsSync(process.cwd() + `${this.separator}database${this.separator}${name}`)) {
-      const data = fs.mkdirSync(process.cwd() + `${this.separator}database${this.separator}${name}`);
-      this.events.emit('tableCreated', data);
-    }
+    if(!fs.existsSync(process.cwd() + `${this.separator}database`)) fs.mkdirSync(process.cwd() + `${this.separator}database${this.separator}`);
+    if(!fs.existsSync(process.cwd() + `${this.separator}database${this.separator}${name}`)) return fs.mkdirSync(process.cwd() + `${this.separator}database${this.separator}${name}`)
   }
 }
 
