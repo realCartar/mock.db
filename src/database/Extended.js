@@ -19,7 +19,7 @@ class funkytown extends table {
   delete(entry = String) {
     if(!entry) return console.error(new TypeError('no entry provided when deleting from a table'))
     let path = `${process.cwd()}${this.separator}database${this.separator}${this.tableName}${this.separator}${entry}.json`;
-    if(!fs.existsSync(path)) return undefined;
+    if(!fs.existsSync(path)) return null;
     fs.unlinkSync(path);
     return null;
   }
