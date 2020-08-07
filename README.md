@@ -1,5 +1,6 @@
 # mock.db
-Lemme drive the boat. This 👏 is 👏 the 👏 most 👏 efficient 👏 database 👏 to 👏 date.
+Lemme drive the bus.
+This 👏 is 👏 the 👏 most 👏 efficient 👏 database 👏 to 👏 date.
 
 # Documetation
 
