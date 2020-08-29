@@ -1,6 +1,6 @@
 {
   "name": "mock.db",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Lemme drive the bus. This 👏 is 👏 the 👏 most 👏 efficient 👏 database 👏 to 👏 date.",
   "main": "src/index.js",
   "scripts": {
