@@ -12,16 +12,16 @@ class funkytown extends table {
   set(entry = String, data = Any) {
     if(!entry) return console.error(new TypeError('no entry provided when setting to a table'));
     if(!data) return console.error(new TypeError('no data to set to an entry'));
-    const path = path.join(process.cwd(), "database", this.tableName, `${entry}.json`);
-    if(!fs.existsSync(path)) return fs.appendFileSync(path, JSON.stringify({val: data}));
-    else fs.writeFileSync(path, JSON.stringify({val: data}));
+    const location = path.join(process.cwd(), "database", this.tableName, `${entry}.json`);
+    if(!fs.existsSync(location)) return fs.appendFileSync(location, JSON.stringify({val: data}));
+    else fs.writeFileSync(location, JSON.stringify({val: data}));
     return data;
   }
   delete(entry = String) {
     if(!entry) return console.error(new TypeError('no entry provided when deleting from a table'));
-    let path = path.join(process.cwd(), "database", this.tableName, `${entry}.json`);
-    if(!fs.existsSync(path)) return null;
-    fs.unlinkSync(path);
+    const location = path.join(process.cwd(), "database", this.tableName, `${entry}.json`);
+    if(!fs.existsSync(location)) return null;
+    fs.unlinkSync(location);
     return null;
   }
 }
