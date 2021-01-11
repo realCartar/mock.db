@@ -22,3 +22,11 @@ table.set('entry_name', {name: 'jeff bezos', age: 14, description: null});
 const db = require('mock.db'),
       table = new db.table('test_table');
 table.fetch('entry_name') // expected output: {name: 'jeff bezos', age: 14, description: null}
+```
+ 
+> Delete an entry
+```js
+const db = require('mock.db'),
+      table = new db.table('test_table');
+table.delete('entry_name') // null
+```
